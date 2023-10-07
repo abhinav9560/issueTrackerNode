@@ -1,0 +1,19 @@
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding:2vh;
+    padding-inline: 5vw;
+}
+.btn{
+    border: 1px solid black;
+    padding: 4px;
+    background-color: rgb(219, 232, 243);
+}
+.btn:hover{
+    scale: 1px;
+    background-color:  rgb(90, 125, 153);;
+}
