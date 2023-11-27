@@ -1,19 +1,33 @@
-
 .nav-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: antiquewhite;
-    padding:2vh;
+    padding: 2vh;
     padding-inline: 5vw;
 }
-.btn{
+
+.btn {
     border: 1px solid black;
     padding: 4px;
     background-color: rgb(219, 232, 243);
 }
-.btn:hover{
+
+.btn:hover {
     scale: 1px;
-    background-color:  rgb(90, 125, 153);;
+    background-color: rgb(90, 125, 153);
+    ;
+}
+
+.footer-container {
+    height: 5vh;
+}
+.project-card a{
+    text-decoration: none;
+    color: black;
+}
+.aside{
+    border-width: 2ppx solid red;
+    flex-grow: 1;
 }

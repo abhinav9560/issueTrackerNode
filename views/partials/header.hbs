@@ -2,7 +2,15 @@
   <nav class="nav-container">
     <h1>Issue Tracker</h1>
     <div class="nav-links">
-      <a><div class="btn">Create Project</div></a>
+      {{#if bug}}
+      <a href="/bug">
+        <div class="btn">Create Bug</div>
+      </a>
+      {{else}}
+      <a href="/create">
+        <div class="btn">Create Project</div>
+      </a>
+      {{/if}}
     </div>
   </nav>
 </header>

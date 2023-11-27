@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+</head>
+
+<body>
+
+    {{>header bug=true}}
+    <div>
+        <h1>Project Detail</h1>
+        <div class="project-card">
+            <h4 class="title">{{project.name}}</h4>
+            <p>{{project.desc}}</p>
+            <p>Author : <i>{{project.author}}</i></p>
+        </div>
+        <aside class="aside">
+            <ul>
+            {{#each bugs}}
+            <li>
+                <h4 class="title">{{name}}</h4>
+                <p>{{desc}}</p>
+                <p>Author: {{author}}</p>
+            </li>
+            {{/each}}
+            </ul>
+        </aside>
+    </div>
+    {{>footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/58df015486.js" crossorigin="anonymous"></script>
+    <!-- Rest of the website content goes here -->
+</body>
+
+</html>

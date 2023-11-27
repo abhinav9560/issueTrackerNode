@@ -11,17 +11,18 @@
 <body>
 
   {{>header}}
-  <div id="scroll-container">
-    
-  </div>
-  <div>
-    <div id="left">
-      <i class="fa-solid fa-angle-left arrow"></i>
+    <div>
+      <ul>
+        <h1>Projects</h1>
+        {{#each projects}}
+        <li>
+          <div class="project-card">
+            <a href="/project/{{_id}}" class="a-title"><h4 class="title">{{name}}</h4></a>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
     </div>
-    <div id="right">
-      <i class="fa-solid fa-angle-right arrow"></i>
-    </div>
-  </div>
   {{>footer}}
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

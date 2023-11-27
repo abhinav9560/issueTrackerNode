@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <title>create project</title>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/create" method="POST" id="my_form">
+            <h2>Create New Project</h2>
+            <input type="text" name="title" placeholder="Enter project title" class="input-field">
+            <textarea  name="desc" placeholder="Enter description" class="text-field"></textarea>
+            <input type="text" name="tag" placeholder="Enter project tag" class="input-field">
+            <input type="text" name="author" placeholder="Enter author name" class="input-field">
+            <button type="submit" class="submit">Create</button>
+        </form>
+        {{#if messages.error}}
+        <p>{{messages.error}}</p>
+        {{/if}}
+    </div>
+</body>
+
+</html>
