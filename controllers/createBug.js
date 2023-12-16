@@ -3,18 +3,19 @@ const Bug = require('../database/model/bugSchema');
 
 
 const createBug = async (req, res) => {
-    const { title, desc, author, labels, projectId } = req.body;
-    if (!title || !desc || !author || !projectId) {
+    const { title, desc, author, labels } = req.body;
+    const id = req.params.id;
+    if (!title || !desc || !author || !id) {
         res.send(400)
     } else {
-        const project = await Bug.create({
+        await Bug.create({
             title: title,
             desc: desc,
-            labels: [...labels],
+            // labels: [...labels],
             author: author,
-            projectId: projectId
+            projectId: id
         })
-        res.send(200, project)
+        res.redirect(`../../project/${id}`)
     }
 }
 

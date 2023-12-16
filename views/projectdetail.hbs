@@ -10,7 +10,7 @@
 
 <body>
 
-    {{>header bug=true}}
+    {{>header id=project._id}}
     <div>
         <h1>Project Detail</h1>
         <div class="project-card">
@@ -18,6 +18,7 @@
             <p>{{project.desc}}</p>
             <p>Author : <i>{{project.author}}</i></p>
         </div>
+         <h1>Bugs</h1>
         <aside class="aside">
             <ul>
             {{#each bugs}}

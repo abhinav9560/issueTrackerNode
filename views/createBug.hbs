@@ -9,10 +9,11 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="/create" method="POST" id="my_form">
-            <h2>Create New Project</h2>
-            <input type="text" name="title" placeholder="Enter project title" class="input-field">
+        <form action="/bugs/create/{{id}}" method="POST" id="my_form">
+            <h2>Create New Bug</h2>
+            <input type="text" name="title" placeholder="Title" class="input-field">
             <textarea  name="desc" placeholder="Enter description" class="text-field"></textarea>
+            <input type="text" name="tag" placeholder="Enter project tag" class="input-field">
             <input type="text" name="author" placeholder="Enter author name" class="input-field">
             <button type="submit" class="submit">Create</button>
         </form>

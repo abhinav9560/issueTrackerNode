@@ -2,10 +2,11 @@ const express = require('express');
 const routes = express.Router();
 const {createBug} = require('../controllers/createBug')
 
-routes.get("/", async (req, res) => {
-    res.render("home")
+routes.get("/:id", async (req, res) => {
+    const id = req.params.id
+    res.render("createBug",{id})
 })
 
-routes.post("/createbug",createBug);
+routes.post("/create/:id",createBug);
 
 module.exports = routes;
